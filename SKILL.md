@@ -1,12 +1,12 @@
 ---
-name: last30days-v3
+name: "last30days-v3"
 version: "3.0.0"
 description: "Cluster-first last-30-days research across social, market, and grounded web sources (v3 pipeline; distinct from /last30days v2)."
 argument-hint: "last30days-v3 codex vs claude code"
-allowed-tools: Bash, Read, Write, WebSearch
-homepage: https://github.com/mvanhorn/last30days-skill
-repository: https://github.com/mvanhorn/last30days-skill
-author: mvanhorn
+allowed-tools: "Bash, Read, Write, WebSearch"
+homepage: "https://github.com/mvanhorn/last30days-skill"
+repository: "https://github.com/mvanhorn/last30days-skill"
+author: "mvanhorn"
 license: MIT
 user-invocable: true
 metadata:
@@ -29,7 +29,7 @@ metadata:
     primaryEnv: GOOGLE_API_KEY
     files:
       - "scripts/*"
-    homepage: https://github.com/mvanhorn/last30days-skill
+    homepage: "https://github.com/mvanhorn/last30days-skill"
     tags:
       - research
       - recency

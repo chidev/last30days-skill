@@ -1,12 +1,12 @@
 ---
-name: last30days-v3-open
+name: "last30days-v3-open"
 version: "3.0.0"
 description: "Persistent last-30-days research for OpenClaw on the v3 engine (watchlists, briefings, history). Use with last30days-v3 root skill."
-argument-hint: 'last30days-v3-open watch "competitors", last30days-v3-open briefing, last30days-v3-open history "AI video"'
-allowed-tools: Bash, Read, Write, WebSearch
-homepage: https://github.com/mvanhorn/last30days-skill
-repository: https://github.com/mvanhorn/last30days-skill
-author: mvanhorn
+argument-hint: "last30days-v3-open watch competitors, last30days-v3-open briefing, last30days-v3-open history AI video"
+allowed-tools: "Bash, Read, Write, WebSearch"
+homepage: "https://github.com/mvanhorn/last30days-skill"
+repository: "https://github.com/mvanhorn/last30days-skill"
+author: "mvanhorn"
 license: MIT
 user-invocable: true
 metadata:
@@ -31,7 +31,7 @@ metadata:
       - "scripts/*"
       - "variants/open/*"
       - "variants/open/references/*"
-    homepage: https://github.com/mvanhorn/last30days-skill
+    homepage: "https://github.com/mvanhorn/last30days-skill"
     tags:
       - research
       - watchlist

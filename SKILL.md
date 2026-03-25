@@ -1,8 +1,8 @@
 ---
-name: last30days
+name: last30days-v3
 version: "3.0.0"
-description: "Cluster-first last-30-days research across social, market, and grounded web sources."
-argument-hint: "last30days codex vs claude code"
+description: "Cluster-first last-30-days research across social, market, and grounded web sources (v3 pipeline; distinct from /last30days v2)."
+argument-hint: "last30days-v3 codex vs claude code"
 allowed-tools: Bash, Read, Write, WebSearch
 homepage: https://github.com/mvanhorn/last30days-skill
 repository: https://github.com/mvanhorn/last30days-skill
@@ -39,9 +39,9 @@ metadata:
       - analysis
 ---
 
-# last30days v3.0.0
+# last30days-v3 (v3.0.0)
 
-Use `last30days` when the user wants recent, cross-source evidence from the last 30 days.
+Use `last30days-v3` when the user wants recent, cross-source evidence from the last 30 days via the cluster-first v3 pipeline (not the v2 `/last30days` skill).
 
 The runtime is a single v3 pipeline:
 
@@ -61,6 +61,11 @@ for dir in \
   "." \
   "${CLAUDE_PLUGIN_ROOT:-}" \
   "${GEMINI_EXTENSION_DIR:-}" \
+  "$HOME/.openclaw/workspace/skills/last30days-v3" \
+  "$HOME/.openclaw/skills/last30days-v3" \
+  "$HOME/.claude/skills/last30days-v3" \
+  "$HOME/.agents/skills/last30days-v3" \
+  "$HOME/.codex/skills/last30days-v3" \
   "$HOME/.openclaw/workspace/skills/last30days" \
   "$HOME/.openclaw/skills/last30days" \
   "$HOME/.claude/skills/last30days" \

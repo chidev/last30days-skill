@@ -1,8 +1,8 @@
 ---
-name: last30days
+name: last30days-v3-open
 version: "3.0.0"
-description: "Persistent last-30-days research for OpenClaw: one-shot research, watchlists, briefings, and history on top of the v3 engine."
-argument-hint: 'last30 watch "competitors", last30 briefing, last30 history "AI video", last30 codex vs claude code'
+description: "Persistent last-30-days research for OpenClaw on the v3 engine (watchlists, briefings, history). Use with last30days-v3 root skill."
+argument-hint: 'last30days-v3-open watch "competitors", last30days-v3-open briefing, last30days-v3-open history "AI video"'
 allowed-tools: Bash, Read, Write, WebSearch
 homepage: https://github.com/mvanhorn/last30days-skill
 repository: https://github.com/mvanhorn/last30days-skill
@@ -43,9 +43,9 @@ metadata:
       - analysis
 ---
 
-# last30days v3.0.0 (Open Variant)
+# last30days-v3-open (v3.0.0, OpenClaw variant)
 
-Use this wrapper when you want persistent recency research instead of one-shot answers.
+Use this wrapper when you want persistent recency research instead of one-shot answers (v3 pipeline; distinct from v2 `/last30days`).
 
 This variant keeps the v3 pipeline:
 
@@ -72,6 +72,11 @@ for dir in \
   "." \
   "${CLAUDE_PLUGIN_ROOT:-}" \
   "${GEMINI_EXTENSION_DIR:-}" \
+  "$HOME/.openclaw/workspace/skills/last30days-v3" \
+  "$HOME/.openclaw/skills/last30days-v3" \
+  "$HOME/.claude/skills/last30days-v3" \
+  "$HOME/.agents/skills/last30days-v3" \
+  "$HOME/.codex/skills/last30days-v3" \
   "$HOME/.openclaw/workspace/skills/last30days" \
   "$HOME/.openclaw/skills/last30days" \
   "$HOME/.claude/skills/last30days" \
@@ -96,7 +101,7 @@ At session start, read `${SKILL_ROOT}/variants/open/context.md`.
 
 - `GOOGLE_API_KEY` is the primary credential. It enables Gemini planning, reranking, and Google Search grounding.
 - OpenClaw can supply env vars through `~/.openclaw/.env` or `~/.openclaw/openclaw.json`.
-- `last30days` also reads process env, repo `.claude/last30days.env`, and `~/.config/last30days/.env`.
+- The engine also reads process env, repo `.claude/last30days.env`, and `~/.config/last30days/.env`.
 - This open variant uses Gemini grounded web retrieval. It does not depend on the removed Brave / Parallel / OpenRouter stack.
 
 ## Command routing
